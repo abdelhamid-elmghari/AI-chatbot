@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanityCheck</title>
+    <link rel="icone" href="images/icons8-ai-96.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex items-center justify-between px-10 py-5 w-screen">
+        <div class="logo flex items-center   gap-x-2 font-bold">
+            <img class="w-[40px]" src="images/icons8-ai-96.png" alt="">
+            <h1 class="text-2xl">Humanity Check</h1>
+        </div>
+
+
+        <nav class="flex items-center  justify-end gap-x-10">
+            <a href=""><button class="items-center flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]"><i class="fa-solid fa-file-circle-plus"></i> new chat</button></a>
+            <button class="items-center  flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]" id="setting"><i class="fa-solid fa-sliders"></i>setting</button>
+            <button class="cursor-pointer text-xl" id="mode"> <i class="fa-solid fa-sun"></i></button>
+        </nav>
+    </header>
+    <div class="setting">
+        <div class="settingbar">
+            <i id="non-display" class="fa-solid fa-circle-xmark"></i>
+        </div>
+    </div>
+
+    <!-- Add your app UI here -->
+    <div class="contener">
+        <div class="chatbody">
+            <h1 class="title">Hi there 👋, I’m Humanechek. What would you like me to check for you?</h1>
+            <div class="chat-message">
+
+
+            </div>
+        </div>
+        <footer>
+            <form class="chat-footer shadow-2xs" action="">
+                <button><i class="fa-solid fa-plus"></i></button>
+                <textarea id="message-input" name="" id="" placeholder="Let your thoughts flow…"></textarea>
+                <button class="emoji-chat" id="emoji-chat">
+              <span><i class="fa-regular fa-face-smile"></i></span>
+            </button>
+                <div class="file-upload-warapper">
+                    <input type="file" name="" accept="image/*" id="file-input" hidden>
+                    <button type="button" class="chat-attach" id="file-upload" title="Attach">
+                <span><i class="fa-solid fa-paperclip"></i></span>
+            </button></div>
+                <button class="chat-send" id="send-messsag" title="Send">
+                <span><i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+
+            </form>
+            <div class="info-per">
+                <h2><i class="fa-solid fa-copyright"></i> By elmghari abdelhamid </h2>
+                <p><i class="fa-solid fa-envelope"></i> helmghari608@gmail.com</p>
+            </div>
+
+        </footer>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@5/dist/browser.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/apis.js"></script>
+    <script src="scripts/dom.js" type="module"></script>
+    <script src="scripts/localstorage.js"></script>
+</body>
+
+</html>

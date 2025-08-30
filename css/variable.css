@@ -1,0 +1,32 @@
+/* variable.css - CSS custom properties */
+
+:root {
+    --primary-color: rgb(39, 39, 39);
+    --secondary-color: #c3c3c3f1;
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --bg-button: linear-gradient( 0deg, hsl(240deg 3% 7%) 0%, hsl(240deg 3% 8%) 35%, hsl(240deg 3% 10%) 87%, hsl(240deg 3% 11%) 97%, hsl(240deg 3% 10%) 100%, hsl(241deg 3% 8%) 101%, hsl(241deg 4% 4%) 101%, hsl(0deg 0% 0%) 100%);
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    scrollbar-width: thin;
+    scrollbar-color: #4a90e2 transparent;
+}
+
+.mode-nght {
+    --primary-color: linear-gradient(90deg, rgba(218, 220, 224, 1) 0%, rgba(227, 220, 220, 1) 1%, rgba(230, 223, 223, 1) 0%, rgba(240, 235, 235, 1) 100%, rgba(217, 215, 215, 1) 0%, rgba(222, 217, 213, 1) 100%);
+    --secondary-color: rgb(13, 2, 34);
+    --bg-button: linear-gradient(to right, #ffffff, #fcfcfc, #fafafa, #f7f7f7, #f5f5f5);
+}
+
+
+/* ...existing code... */

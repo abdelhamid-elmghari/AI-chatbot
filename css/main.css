@@ -1,0 +1,8 @@
+/* main.css - Global styles for AI Chatbot */
+
+@import url('variable.css');
+@import url('header.css');
+@import url('content.css');
+@import url('setting.css');
+
+/* ...existing code... */

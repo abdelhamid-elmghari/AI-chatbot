@@ -1,0 +1,8 @@
+/* header.css - Styles for the header */
+
+header {
+    & nav {}
+}
+
+
+/* ...existing code... */
