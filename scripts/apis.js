@@ -19,12 +19,17 @@ Wrap all text elements with CSS classes for font size, font weight, and left spa
 Example of style:  
 
 <p class="text-base font-normal ml-4">Paragraph text...</p>  
-<ul class="ml-5 list-disc ">  
+<ul class="ml-10 list-disc ">  
 <li class="text-base font-normal pl-10">List item</li>  
 </ul>  
-
-
+-use hr line forn each partes
+- use deep serch and createvte
+-use line hight 2rem eatch line dont forget it's very important !!
+- use background color black for each code you create like python ... dont forget some colors 
+-eatch line no longer just some words very imprtant becouse flexibilty phone smalle
+-and finaly add some quoition ask him if he want something about this conversation and these quoition added from h2
 Generate the text in this exact structure with no extra symbols.
+-using scrollbar horizontal of code 
 ⚠️ Danger: Do not go outside these instructions. Stay inside the requested format only. 
 
     `;

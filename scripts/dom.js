@@ -92,7 +92,7 @@ function strtSend() {
 }
 async function responsedataAI(incomingMessageDiv, userDatamessage) {
     const ResponseDATA = await generateBotResponse(userData.file.data, userData.file.mime_type, userDatamessage);
-    incomingMessageDiv.innerHTML = `    <div class="message"></div>`
+    incomingMessageDiv.innerHTML = `  <div class="respose">  <div class="message"></div></div>`
     incomingMessageDiv.querySelector(".message").innerHTML = `${ResponseDATA}`;
     chatbody.scrollTo({ top: chatbody.scrollHeight, behavior: "smooth" })
 }
@@ -140,7 +140,7 @@ document.querySelector(".chat-footer").appendChild(emojiElement);
                 emojiElement.classList.toggle("display-emoji");
                 
  })
- 
+
  const nav = document.querySelector("nav ");
 const open = document.querySelector("#open");
 const close = document.querySelector("#close");

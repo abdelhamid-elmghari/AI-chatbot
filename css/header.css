@@ -8,6 +8,12 @@
     color: var(--secondary-color);
 }
 
+header {
+    backdrop-filter: blur(12rem);
+    position: fixed;
+    z-index: 999;
+}
+
 @media (max-width:1060px) {
     header {
         & #open,

@@ -1,6 +1,7 @@
         /* content.css - Styles for the main content */
         
         .contener {
+            padding-inline: 10px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -24,28 +25,31 @@
         /* ...existing code... */
         
          :is(.boit-message-ai, .boit-message-user) {
-            width: 100%;
+            width: 100vw;
             margin-block: 10px;
-            padding-inline: 40px;
         }
         
         .chat-message {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            padding-inline: 20px;
         }
         
         .boit-message-ai {
             padding-right: 200px;
             padding-inline: 2rem;
+            font-size: 1rem;
         }
         
         .boit-message-ai {
-            line-height: 5rem;
+            line-height: 2rem;
         }
         
         .boit-message-user {
             display: flex;
+            padding-inline: 2rem;
+            min-height: 80%;
             flex-direction: column;
             gap: 30px;
             align-items: end;
@@ -64,6 +68,7 @@
         /* ------------------------------------------------------------------------- */
         
         .loader {
+            padding-top: 40px;
             display: block;
             width: 10px;
             height: 10px;
@@ -111,7 +116,7 @@
         footer {
             transition: 0.5s;
             min-width: 70%;
-            margin-top: 10px;
+            margin-top: 0px;
             backdrop-filter: blur(20px);
             & form {
                 border: 1px solid rgba(111, 111, 111, 0.399);
@@ -187,4 +192,31 @@
                     font-size: 0.5rem;
                 }
             }
+            .boit-message-ai {
+                scale: 0.9;
+            }
+            .chat-message {
+                min-width: 80%;
+            }
+            .boit-message-user {
+                position: relative;
+                & .message {
+                    right: 50px;
+                    position: absolute;
+                }
+            }
+            .respose {
+                backdrop-filter: blur(5px);
+                padding: 10px;
+                border-radius: 16px;
+                width: 460px;
+                border: 0.2px solid rgba(255, 255, 255, 0.4);
+            }
+        }
+        
+        .respose {
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 16px;
+            border: 0.2px solid rgba(255, 255, 255, 0.4);
         }
