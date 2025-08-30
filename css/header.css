@@ -1,7 +1,46 @@
 /* header.css - Styles for the header */
 
-header {
-    & nav {}
+#open,
+#close {
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+@media (max-width:1060px) {
+    header {
+        & #open,
+        #close {
+            display: block;
+            margin-right: 0px;
+        }
+        & .fa-xmark {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+        }
+        & nav {
+            position: fixed;
+            right: -500px;
+            width: 0;
+            align-items: center;
+            top: 0;
+            z-index: 999;
+            padding-inline: 20px;
+            justify-content: center;
+            height: 100vh;
+            border-radius: 0;
+            transition: 0.5s;
+            gap: 20px;
+            flex-direction: column;
+        }
+    }
+    .nav_display {
+        right: 0;
+        backdrop-filter: blur(5rem);
+        width: 100%;
+    }
 }
 
 

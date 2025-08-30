@@ -20,6 +20,7 @@ body {
     font-weight: 400;
     scrollbar-width: thin;
     scrollbar-color: #4a90e2 transparent;
+    overflow-x: hidden;
 }
 
 .mode-nght {

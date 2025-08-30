@@ -170,11 +170,21 @@
             max-width: 350px;
             max-height: 0;
             transition: 0.5s;
-            opacity: 0;
+            display: none;
         }
         
         .display-emoji {
             right: 10%;
+            display: block;
             max-height: 330px;
             opacity: 1;
+            z-index: 1;
+        }
+        
+        @media (max-width:800px) {
+            .contener {
+                & h1 {
+                    font-size: 0.5rem;
+                }
+            }
         }

@@ -140,3 +140,18 @@ document.querySelector(".chat-footer").appendChild(emojiElement);
                 emojiElement.classList.toggle("display-emoji");
                 
  })
+ 
+ const nav = document.querySelector("nav ");
+const open = document.querySelector("#open");
+const close = document.querySelector("#close");
+
+    open.addEventListener("click", function() {
+        if (!nav.classList.contains("nav_display")) {
+            nav.classList.add("nav_display");
+        }
+    })
+    close.addEventListener("click", function() {
+        if (nav.classList.contains("nav_display")) {
+            nav.classList.remove("nav_display");
+        }
+    })
