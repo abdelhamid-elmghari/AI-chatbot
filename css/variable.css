@@ -27,7 +27,9 @@ body {
 }
 
 .mode-nght {
-    --primary-color: linear-gradient(90deg, rgb(252, 252, 252) 0%, rgba(227, 220, 220, 1) 1%, rgba(230, 223, 223, 1) 0%, rgba(240, 235, 235, 1) 100%, rgba(217, 215, 215, 1) 0%, rgba(222, 217, 213, 1) 100%);
+    --color-image: radial-gradient(#acacac 0.7px, #f1f0f0 0.5px);
+    --background-size: 10px 10px;
+    --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(13, 2, 34);
     --bg-button: linear-gradient(to right, #ffffff, #fcfcfc, #fafafa, #f7f7f7, #f5f5f5);
 }

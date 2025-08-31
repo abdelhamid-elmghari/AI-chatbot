@@ -22,7 +22,7 @@ Example of style:
 <ul class="ml-10 list-disc ">  
 <li class="text-base font-normal pl-10">List item</li>  
 </ul>  
--use hr line forn each partes
+-use hr line forn each partes but color rgba(219, 219, 219, 0.438)
 - use deep serch and createvte
 -use line hight 2rem eatch line dont forget it's very important !!
 - use background color black for each code you create like python ... dont forget some colors 

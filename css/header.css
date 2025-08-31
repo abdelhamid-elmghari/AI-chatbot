@@ -9,9 +9,10 @@
 }
 
 header {
-    backdrop-filter: blur(12rem);
     position: fixed;
     z-index: 999;
+    border-bottom: 0.2px solid rgba(170, 170, 170, 0.393);
+    background-color: var(--primary-color);
 }
 
 @media (max-width:1060px) {
