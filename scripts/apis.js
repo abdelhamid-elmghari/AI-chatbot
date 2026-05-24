@@ -2,8 +2,7 @@
 // ...existing code...
 // API SETUP
 
-const API_KEY = "AIzaSyDG-DkaM9f-m_D_XtcNTy7olFHJmt7MEMQ";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+
 
 export async function generateBotResponse(userdataFiledata, userDatafilemime_type, userdataMessage) {
     const systemPrompt = `
