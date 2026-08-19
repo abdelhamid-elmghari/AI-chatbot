@@ -52,7 +52,5 @@ Designed to be modular, easy to extend, and a foundation for integrating AI APIs
 
 ---
 
-## License
 
-Free to use and modify for personal and learning purposes.
 
