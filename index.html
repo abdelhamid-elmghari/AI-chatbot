@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HumanityCheck - AI-powered chatbot for text generation and analysis">
     <title>HumanityCheck</title>
     <!-- Favicon for the site -->
-    <link rel="icone" href="images/icons8-ai-96.png">
+    <link rel="icon" href="images/icons8-ai-96.png">
     <!-- Main CSS file for global styles -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Tailwind CSS via CDN for utility classes -->
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <!-- Alternative favicon -->
-    <link rel="icone" href="images/tuteur-ai.png">
+    <link rel="icon" href="images/tuteur-ai.png">
     <!-- Preconnect for Google Fonts optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,65 +26,69 @@
 </head>
 
 <body>
-    <header class="flex items-center justify-between px-10 py-5 w-screen">
-        <div class="logo flex items-center   gap-x-2 font-bold">
-            <img class="w-[40px]" src="images/tuteur-ai.png" alt="">
+    <header class="flex items-center justify-between px-10 py-5 w-screen" role="banner">
+        <div class="logo flex items-center gap-x-2 font-bold">
+            <img class="w-[40px]" src="images/tuteur-ai.png" alt="HumanityCheck logo">
             <h1 class="text-2xl">Humanity Check</h1>
         </div>
 
-
-        <nav class="flex items-center  justify-end gap-x-10">
-            <i id="close" class=" fa-solid fa-xmark"></i>
-            <a href=""><button class="items-center flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]"><i class="fa-solid fa-file-circle-plus"></i> new chat</button></a>
-            <button class="items-center  flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]" id="setting"><i class="fa-solid fa-sliders"></i>setting</button>
-            <button class="cursor-pointer text-xl" id="mode"> <i class="fa-solid fa-sun"></i></button>
+        <nav class="flex items-center justify-end gap-x-10" role="navigation" aria-label="Main navigation">
+            <button id="close" class="fa-solid fa-xmark" aria-label="Close menu" aria-expanded="false"></button>
+            <button id="new-chat" class="items-center flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]" aria-label="Start new chat">
+                <i class="fa-solid fa-file-circle-plus"></i> <span>New chat</span>
+            </button>
+            <button class="items-center flex gap-2 cursor-pointer rounded-2xl bg-slate-700 px-3 py-2 text-[#fff]" id="setting" aria-label="Open settings" aria-expanded="false">
+                <i class="fa-solid fa-sliders"></i> <span>Settings</span>
+            </button>
+            <button class="cursor-pointer text-xl" id="mode" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="fa-solid fa-sun"></i>
+            </button>
         </nav>
-        <i id="open" class=" fa-duotone fa-solid fa-bars"></i>
+        <button id="open" class="fa-duotone fa-solid fa-bars" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"></button>
     </header>
-    <div class="setting">
+    <div class="setting" role="dialog" aria-label="Settings" aria-modal="true" hidden>
         <div class="settingbar">
-            <i id="non-display" class="fa-solid fa-circle-xmark"></i>
+            <button id="non-display" class="fa-solid fa-circle-xmark" aria-label="Close settings"></button>
         </div>
     </div>
 
     <!-- Add your app UI here -->
-    <div class="contener">
+    <main class="contener" role="main">
         <div class="chatbody">
             <h1 class="title">Hi 👋, what should I check for you?</h1>
-            <div class="chat-message">
+            <div class="chat-message" role="log" aria-live="polite" aria-label="Conversation">
 
 
             </div>
         </div>
-        <footer>
-            <form class="chat-footer shadow-2xs" action="">
-                <button><i class="fa-solid fa-plus"></i></button>
-                <textarea id="message-input" name="" id="" placeholder="Let your thoughts flow…"></textarea>
-                <button class="emoji-chat" id="emoji-chat">
-              <span><i class="fa-regular fa-face-smile"></i></span>
-            </button>
+        <footer role="contentinfo">
+            <form class="chat-footer shadow-2xs" action="" aria-label="Message input">
+                <button type="button" class="chat-attach" aria-label="Attach file"><i class="fa-solid fa-plus"></i></button>
+                <textarea id="message-input" name="message" placeholder="Let your thoughts flow…" aria-label="Message input" rows="1"></textarea>
+                <button type="button" class="emoji-chat" id="emoji-chat" aria-label="Open emoji picker">
+                    <span><i class="fa-regular fa-face-smile"></i></span>
+                </button>
                 <div class="file-upload-warapper">
-                    <input type="file" name="" accept="image/*" id="file-input" hidden>
-                    <button type="button" class="chat-attach" id="file-upload" title="Attach">
-                <span><i class="fa-solid fa-paperclip"></i></span>
-            </button></div>
-                <button class="chat-send" id="send-messsag" title="Send">
-                <span><i class="fa-solid fa-paper-plane"></i></span>
-            </button>
+                    <input type="file" name="file" accept="image/*" id="file-input" hidden aria-label="File upload">
+                    <button type="button" class="chat-attach" id="file-upload" title="Attach" aria-label="Attach image">
+                        <span><i class="fa-solid fa-paperclip"></i></span>
+                    </button>
+                </div>
+                <button type="submit" class="chat-send" id="send-messsag" title="Send" aria-label="Send message">
+                    <span><i class="fa-solid fa-paper-plane"></i></span>
+                </button>
 
             </form>
             <div class="info-per">
-                <h2><i class="fa-solid fa-copyright"></i> By elmghari abdelhamid </h2>
-                <p><i class="fa-solid fa-envelope"></i> helmghari608@gmail.com</p>
+                <p><i class="fa-solid fa-copyright" aria-hidden="true"></i> By elmghari abdelhamid</p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:helmghari608@gmail.com">helmghari608@gmail.com</a></p>
             </div>
 
         </footer>
 
-
-    </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/emoji-mart@5/dist/browser.js"></script>
-    <script src="scripts/main.js"></script>
     <script src="scripts/apis.js"></script>
     <script src="scripts/dom.js" type="module"></script>
     <script src="scripts/localstorage.js"></script>

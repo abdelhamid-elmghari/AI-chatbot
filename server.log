@@ -1,0 +1,11 @@
+::1 - - [19/Aug/2026 20:18:39] "GET / HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /css/main.css HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /images/tuteur-ai.png HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /scripts/dom.js HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /css/header.css HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /css/variable.css HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /css/content.css HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /css/setting.css HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /scripts/apis.js HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:39] "GET /scripts/localstorage.js HTTP/1.1" 200 -
+::1 - - [19/Aug/2026 20:18:40] "GET /images/icons8-ai-96.png HTTP/1.1" 200 -
