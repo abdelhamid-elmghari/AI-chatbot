@@ -1,38 +1,204 @@
 /* variable.css - CSS custom properties */
 
 :root {
+    /* Colors */
     --primary-color: rgb(39, 39, 39);
+    --primary-color-light: rgb(55, 55, 55);
+    --secondary-color: #d7d5d5ff;
+    --secondary-color-muted: rgba(215, 213, 213, 0.7);
+    --accent-color: #ff9d00;
+    --accent-color-hover: #e68a00;
+    --error-color: #ff6b6b;
+    --success-color: #4ade80;
+    --border-color: rgba(170, 170, 170, 0.2);
+    --border-color-hover: rgba(255, 157, 0, 0.3);
+
+    /* Background patterns */
     --color-image: radial-gradient(#adadad 0.7px, #212121 0.5px);
     --background-size: 10px 10px;
-    --secondary-color: #d7d5d5ff;
-    --font-family: 'Segoe UI', Arial, sans-serif;
-    --bg-button: linear-gradient( 0deg, hsl(240deg 3% 7%) 0%, hsl(240deg 3% 8%) 35%, hsl(240deg 3% 10%) 87%, hsl(240deg 3% 11%) 97%, hsl(240deg 3% 10%) 100%, hsl(241deg 3% 8%) 101%, hsl(241deg 4% 4%) 101%, hsl(0deg 0% 0%) 100%);
-    --border-radius: 8px;
+
+    /* Gradients */
+    --bg-button: linear-gradient(
+        180deg,
+        hsl(240deg 3% 7%) 0%,
+        hsl(240deg 3% 8%) 35%,
+        hsl(240deg 3% 10%) 87%,
+        hsl(240deg 3% 11%) 97%,
+        hsl(240deg 3% 10%) 100%,
+        hsl(241deg 3% 8%) 101%,
+        hsl(241deg 4% 4%) 101%,
+        hsl(0deg 0% 0%) 100%
+    );
+    --bg-button-hover: linear-gradient(
+        180deg,
+        hsl(240deg 3% 10%) 0%,
+        hsl(240deg 3% 12%) 35%,
+        hsl(240deg 3% 14%) 87%,
+        hsl(240deg 3% 15%) 97%,
+        hsl(240deg 3% 14%) 100%
+    );
+
+    /* Typography */
+    --font-family-base: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+    --font-size-xs: 0.625rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* Z-index */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     background-size: var(--background-size);
-    background-image: var( --color-image);
+    background-image: var(--color-image);
     color: var(--secondary-color);
     min-height: 100vh;
-    font-family: "Titillium Web", sans-serif;
+    font-family: var(--font-family-base);
     font-weight: 400;
+    line-height: var(--line-height-normal);
     scrollbar-width: thin;
-    scrollbar-color: #4a90e2 transparent;
+    scrollbar-color: var(--accent-color) transparent;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Dark mode (default) */
 .mode-nght {
-    --color-image: radial-gradient(#acacac 0.7px, #f1f0f0 0.5px);
-    --background-size: 10px 10px;
     --primary-color: rgb(255, 255, 255);
+    --primary-color-light: rgb(240, 240, 240);
     --secondary-color: rgb(13, 2, 34);
+    --secondary-color-muted: rgba(19, 3, 46, 0.7);
+    --border-color: rgba(0, 0, 0, 0.15);
+    --border-color-hover: rgba(255, 157, 0, 0.3);
+    --color-image: radial-gradient(#e0e0e0 0.7px, #f5f5f5 0.5px);
     --bg-button: linear-gradient(to right, #ffffff, #fcfcfc, #fafafa, #f7f7f7, #f5f5f5);
+    --bg-button-hover: linear-gradient(to right, #f5f5f5, #f0f0f0, #ebebeb, #e8e8e8, #e5e5e5);
 }
 
+/* Light mode explicit */
+:root:not(.mode-nght) {
+    --primary-color: rgb(39, 39, 39);
+    --primary-color-light: rgb(55, 55, 55);
+    --secondary-color: #d7d5d5ff;
+    --secondary-color-muted: rgba(215, 213, 213, 0.7);
+    --border-color: rgba(170, 170, 170, 0.2);
+    --border-color-hover: rgba(255, 157, 0, 0.3);
+    --color-image: radial-gradient(#adadad 0.7px, #212121 0.5px);
+    --bg-button: linear-gradient(
+        180deg,
+        hsl(240deg 3% 7%) 0%,
+        hsl(240deg 3% 8%) 35%,
+        hsl(240deg 3% 10%) 87%,
+        hsl(240deg 3% 11%) 97%,
+        hsl(240deg 3% 10%) 100%,
+        hsl(241deg 3% 8%) 101%,
+        hsl(241deg 4% 4%) 101%,
+        hsl(0deg 0% 0%) 100%
+    );
+}
 
-/* ...existing code... */
+/* Focus styles */
+*:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Scrollbar styles */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color-hover);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: currentColor;
+        --border-color-hover: currentColor;
+    }
+}
