@@ -1,6 +1,3 @@
-// apis - Handles API requests
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_API_KEY";
-const STREAM_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:streamGenerateContent?key=YOUR_API_KEY&alt=sse";
 
 export async function generateBotResponse(userdataFiledata, userDatafilemime_type, userdataMessage, signal) {
     const systemPrompt = `
